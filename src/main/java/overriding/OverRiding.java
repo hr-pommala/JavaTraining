@@ -80,6 +80,12 @@ public class OverRiding {
 			System.out.println("Area of Circle with Explicit OVerriding: " + shape.area());
 		}
 
+		//cannot create object reference like this
+		/* 
+		Circle circleShape = (Circle) new Shape();	
+		System.out.println(circleShape.area());
+		*/
+		
 		Shape shapeRectangle = new Rectangle(4, 6);
 		System.out.println("Area of Rectangle: " + shapeRectangle.area());
 
