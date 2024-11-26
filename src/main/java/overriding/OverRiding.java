@@ -68,8 +68,10 @@ class Rectangle extends Shape {
 public class OverRiding {
 	public static void main(String[] args) {
 
-		// Implicit Upcasting
+		// Implicit Upcasting,  object is created for subclass and object is referred  (object reference) to super class
 		Shape shapeCircle = new Circle(5);
+		
+		//Object is invoked after validating the references
 		System.out.println("Area of Circle: " + shapeCircle.area());
 	//	System.out.println("Area of Circle: " + shapeCircle.areaTest());
 
@@ -91,6 +93,7 @@ public class OverRiding {
 
 		// Explicit DownCasting
 		if (shapeRectangle instanceof Shape) {
+			//Object reference is update to subclass
 			Rectangle rectangle = (Rectangle) shapeRectangle;
 			System.out.println("Length of Circle by explicit downcasting method: " + rectangle.rectangleLength());
 			System.out.println("Length of Circle by explicit downcasting property: " + rectangle.length);
