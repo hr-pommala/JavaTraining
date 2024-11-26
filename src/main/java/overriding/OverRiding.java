@@ -51,7 +51,7 @@ class Rectangle extends Shape {
  * Explicit casting --> Access subclass specific methods or properties
  * Explicit casting --> Superclass reference to subclass
  */
-public class BasicOverRiding {
+public class OverRiding {
 	public static void main(String[] args) {
 
 		// Implicit Upcasting

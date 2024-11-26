@@ -1,0 +1,5 @@
+Method overriding is an essential feature for achieving runtime polymorphism in Java.
+Points to be noted:-
+1>Method Signature: The overriding method must have the same method signature (name, return type, and parameters) as the method in the superclass.
+2>Access Modifier: The access modifier of the overriding method cannot be more restrictive than the method in the superclass. For example, if the superclass method is public, the subclass method can be public or protected, but not private.
+3>@Override Annotation: The @Override annotation is optional but recommended because it helps to catch errors at compile-time if the method signature doesn't match the superclass method.
