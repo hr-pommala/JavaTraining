@@ -55,7 +55,7 @@ public class BasicOverRiding {
 	public static void main(String[] args) {
 
 		// Implicit Upcasting
-		Shape shapeCircle = new Circle(5.0);
+		Shape shapeCircle = new Circle(5);
 		System.out.println("Area of Circle: " + shapeCircle.area());
 
 		// Explicit downcasting of superclass reference to subclass
@@ -64,7 +64,7 @@ public class BasicOverRiding {
 			System.out.println("Area of Circle with Explicit OVerriding: " + shapeCircle.area());
 		}
 
-		Shape shapeRectangle = new Rectangle(4.0, 6.0);
+		Shape shapeRectangle = new Rectangle(4, 6);
 		System.out.println("Area of Rectangle: " + shapeRectangle.area());
 
 		// Explicit DownCasting
