@@ -6,7 +6,9 @@ package overriding;
 
 class Shape {
 
+	//over riden method
 	double area() {
+		System.out.println("In area method of Shape");
 		return 0.0;
 	}
 
@@ -20,12 +22,20 @@ class Circle extends Shape {
 		this.radius = radius;
 	}
 
+	//over riding method
 	@Override
 	double area() {
+		System.out.println("In area method of Circle");
+		return Math.PI * radius * radius;
+	}
+	
+	double areaTest() {
+		System.out.println("In area method of Circle");
 		return Math.PI * radius * radius;
 	}
 
 }
+
 
 class Rectangle extends Shape {
 
@@ -36,12 +46,15 @@ class Rectangle extends Shape {
 		this.width = width;
 	}
 
+	//over riding method
 	@Override
 	double area() {
+		System.out.println("In area method of Rectangle");
 		return length * width;
 	}
 
 	double rectangleLength() {
+		System.out.println("In rectangleLength method of Rectangle");
 		return length;
 	}
 
@@ -51,17 +64,20 @@ class Rectangle extends Shape {
  * Explicit casting --> Access subclass specific methods or properties
  * Explicit casting --> Superclass reference to subclass
  */
+
 public class OverRiding {
 	public static void main(String[] args) {
 
 		// Implicit Upcasting
 		Shape shapeCircle = new Circle(5);
 		System.out.println("Area of Circle: " + shapeCircle.area());
+	//	System.out.println("Area of Circle: " + shapeCircle.areaTest());
 
 		// Explicit downcasting of superclass reference to subclass
 		Shape shape = new Shape();
+		System.out.println("shape is Instance of Circle "+(shape instanceof Circle));
 		if (shape instanceof Circle) {
-			System.out.println("Area of Circle with Explicit OVerriding: " + shapeCircle.area());
+			System.out.println("Area of Circle with Explicit OVerriding: " + shape.area());
 		}
 
 		Shape shapeRectangle = new Rectangle(4, 6);
