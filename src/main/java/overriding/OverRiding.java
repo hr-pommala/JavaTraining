@@ -6,7 +6,7 @@ package overriding;
 
 class Shape {
 
-	//over riden method
+	//overriden method
 	double area() {
 		System.out.println("In area method of Shape");
 		return 0.0;
