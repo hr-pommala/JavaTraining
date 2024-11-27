@@ -1,4 +1,4 @@
-package overloading;
+package overloading.varargs;
 
 public class OverloadWithVarargs {
 
@@ -26,9 +26,9 @@ public class OverloadWithVarargs {
     	OverloadWithVarargs obj = new OverloadWithVarargs();
         
         // Calling overloaded methods with different numbers of arguments
+    	obj.display();
         obj.display(1);          // Calls method with one argument
         obj.display(1, 2, 3,4, 5);    // Calls method with multiple arguments
-        obj.display();           // Calls method with no arguments
         obj.display("Hello World", 1, 2, 3);    // Calls method with multiple arguments
     }
     

@@ -1,0 +1,14 @@
+When a method is called with no arguments, Java will treat the varargs parameter as an empty array (i.e., T[] 
+where T is the type of the varargs).
+This is possible because the varargs parameter is actually implemented as an array, 
+ and when no arguments are provided, it becomes an empty array.
+ 
+ 
+ Varargs (variable-length arguments) allow a method to accept an arbitrary number of arguments of the same type. Varargs is represented by three dots (...) 
+ followed by the parameter type, like int... nums or String... strings.
+  
+Varargs must be the last parameter in the method signature.
+Varargs can only be used once in the method signature. You cannot have multiple varargs parameters in a single method.
+When overloading methods with varargs, it’s important to avoid ambiguity, as varargs can match a range of arguments. This can lead to issues when the method signature is not specific enough.
+
+Overloading with varargs can create ambiguity if you define methods that look similar but have the potential to match the same arguments. F
