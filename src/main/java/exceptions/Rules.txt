@@ -1,0 +1,50 @@
+Exception Classes in Java
+Exception: The superclass of all exceptions.
+RuntimeException: The superclass of all unchecked exceptions.
+IOException: Signals an I/O error.
+NullPointerException: Occurs when accessing a null reference.
+ArithmeticException: Occurs in arithmetic operations like division by zero.
+ArrayIndexOutOfBoundsException: Occurs when an invalid index is used to access an array.
+ClassNotFoundException: Thrown when trying to load a class that doesn't exist.
+
+
+Why duck an exception?
+Separation of concerns: The method that throws the exception might not be the best place to handle it. Ducking allows the exception to be handled by a method that has more context or is better equipped to deal with the error.
+Code readability: Handling exceptions within a method can clutter its logic. Ducking allows you to keep the method's code focused on its primary purpose.
+Flexibility: Ducking allows you to handle exceptions at different levels of the call stack depending on the situation.
+Important points to remember:
+
+Checked exceptions must be declared:
+If a method can throw a checked exception (like IOException), it must either handle the exception or declare it using the throws clause.
+Unchecked exceptions don't need to be declared:
+Unchecked exceptions (like NullPointerException) can be ducked without explicitly declaring them.
+Handle exceptions responsibly: While ducking is a valid approach, make sure that exceptions are handled somewhere in your code to prevent unexpected program termination.
+
+
+Best Practices
+1.Handle specific exceptions: Catch specific exceptions rather than generic ones like Exception to better handle different error scenarios.
+2.Log exceptions: Log exceptions for debugging and future analysis, especially for production systems.
+3.Don’t overuse exceptions: Exceptions should be used for exceptional cases, not for regular control flow.
+
+      
+
+java.lang.Throwable
+   └── java.lang.Exception
+	 ├── java.io.IOException
+	 │     │    ├── java.io.FileNotFoundException
+	 │     │    ├── java.io.EOFException
+	 │     ├── java.lang.ClassNotFoundException
+	 │     ├── java.lang.InterruptedException
+	 │     │    └── java.util.concurrent.TimeoutException
+	 │     ├── java.lang.NoSuchMethodException
+	 │     ├── java.lang.NoSuchFieldException
+     └── java.lang.RuntimeException
+           ├── java.lang.ArithmeticException
+           ├── java.lang.NullPointerException
+           ├── java.lang.ArrayIndexOutOfBoundsException
+           ├── java.lang.ClassCastException
+           ├── java.lang.NumberFormatException
+           ├── java.lang.IndexOutOfBoundsException
+           ├── java.lang.IllegalArgumentException
+           ├── java.lang.IllegalStateException
+           ├── java.lang.UnsupportedOperationException
