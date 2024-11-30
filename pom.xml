@@ -3,4 +3,35 @@
   <groupId>JavaTraining</groupId>
   <artifactId>JavaTraining</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.2.1</version> <!-- Use the latest version -->
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            
+            <plugins>
+    <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+            <mainClass>com.baeldung.demo.DemoApplication</mainClass>
+            <layout>JAR</layout>
+        </configuration>
+    </plugin>
+</plugins>
+        </plugins>
+        
+    </build>
+
 </project>

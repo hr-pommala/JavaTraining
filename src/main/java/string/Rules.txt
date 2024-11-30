@@ -1,0 +1,28 @@
+1. String Pool (String Interning):-
+-----------------------------------
+Java uses a String Pool, also known as the String Constant Pool (SCP), to save memory. When you create a string literal (like "hello"), Java checks if that string already exists in the pool. If it does, it uses the reference to that string instead of creating a new object. If not, it adds the string to the pool.
+
+Key Points:
+String literals are automatically interned and stored in the string pool.
+If you create a string using the new keyword, a new object is created, even if the same string exists in the pool.
+
+
+Java 8 Improvements:
+In Java 8, the string pool is maintained in the Java heap rather than the PermGen (which was used in earlier versions, up to Java 7). This helps with better memory management, especially in environments with large numbers of strings.
+Interned strings are now stored in a canonical form within the pool to ensure uniqueness.
+
+
+2. String Concatenation and Memory Efficiency:-
+-----------------------------------------------
+String concatenation in Java creates a new string object each time, which can be inefficient in terms of memory. However, Java 8 introduced a more efficient approach to string concatenation using the StringBuilder or StringBuffer classes when concatenating multiple strings.
+
+When you concatenate strings in loops or perform multiple concatenations, Java internally uses StringBuilder or StringBuffer (depending on thread-safety requirements).
+In Java 8, this concatenation operation is optimized to use StringBuilder under the hood, reducing memory usage and improving performance.
+
+3. String Memory Representation:-
+---------------------------------
+Strings are immutable: Once a String object is created, its content cannot be changed. Every modification (like replace, toLowerCase, etc.) results in a new string object being created.
+
+This immutability ensures that strings are thread-safe, but it can result in memory overhead in certain scenarios where strings are being modified repeatedly. Java 8 has optimizations in place to minimize memory overhead when working with strings that don't change (like string literals).
+
+Memory representation: In Java, each string is backed by a char[] array, where each character is stored as two bytes (UTF-16 encoding). This can consume more memory than the actual number of characters in the string.

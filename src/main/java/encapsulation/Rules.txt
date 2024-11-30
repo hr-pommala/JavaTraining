@@ -1,0 +1,20 @@
+Encapsulation:--
+----------------
+Data hiding: It protects the internal state of the object by restricting direct access to it. This helps prevent accidental modification of critical data.
+Maintainability: By encapsulating the internal workings of a class, you can change the implementation without affecting other parts of the program.
+Security: By controlling access to the data, you can ensure that it is only modified in appropriate ways.
+
+Key Points:--
+-------------
+Private Variables: Fields are made private so that they cannot be accessed directly from outside the class.
+Public Methods (Getters and Setters): These methods allow controlled access to private fields.
+Getters: Methods that return the value of private variables.
+Setters: Methods that allow modifying the private fields in a controlled manner.
+
+
+Advantages of Encapsulation:--
+------------------------------
+Control over data: You can control how the data is accessed or modified. For example, you can add validation logic in the setter method to ensure the data remains consistent (e.g., ensuring that age is never set to a negative number).
+Flexibility and maintainability: If you need to change the internal workings of a class, you can do so without affecting other classes or code that uses it, as long as the public interface (getters and setters) remains the same.
+Increased security: By restricting access to data fields, you can ensure that only valid and necessary operations are performed on them, reducing the chances of errors or security issues.
+Easy debugging and testing: Encapsulation allows for easier debugging and unit testing because you can focus on the public methods (getters and setters) and validate how data is being accessed and modified.

@@ -1,0 +1,18 @@
+Abstraction focuses on hiding the complexity of a system and exposing only the necessary and relevant features to the user. 
+It allows you to define the essential characteristics of an object while hiding the implementation details.
+
+In Java, abstraction is achieved through abstract classes and interfaces.
+
+Types:-
+-------
+Abstract Classes: Can contain both abstract methods (methods without a body) and concrete methods (methods with a body).
+Interfaces: Contain only method signatures (without a body) in their traditional form, though in Java 8 and later, 
+they can contain default and static methods as well.
+
+Benefits:-
+----------
+Hiding Complexity: By abstracting away the implementation details, users can interact with simpler, high-level interfaces.
+Code Reusability: Abstract classes and interfaces provide a way to define common behavior and promote code reuse.
+Maintainability: Abstraction allows changes to be made to the implementation of the class without affecting other classes that use it.
+Flexibility: Different concrete implementations can be swapped easily without changing the client code, as long as they follow the same interface or abstract class.
+
