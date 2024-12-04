@@ -6,12 +6,17 @@ class BankAccount {
 
     // Constructor to initialize the balance
     public BankAccount(double initialBalance) {
-        if (initialBalance >= 0) {
+    	super();
+    	if (initialBalance >= 0) {
             this.balance = initialBalance;
         } else {
             this.balance = 0;
         }
+    	
     }
+    
+    //Classname objectReference = new className();
+    //super();
 
     // Getter method to access the balance
     public double getBalance() {

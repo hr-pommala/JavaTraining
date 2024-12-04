@@ -1,5 +1,6 @@
 package string;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -16,9 +17,11 @@ public class StringAPI {
         
         //Split
         String str = "apple,banana,orange";
-        Arrays.stream(str.split(",")) .forEach(System.out::println);
+        Arrays.stream(str.split(",")) 
+        	  .forEach(System.out::println);
         
-        String toChars = "Java8";
+        
+        String toChars = "Java8 Hello World";
         toChars.chars()
            .mapToObj(c -> (char) c)
            .forEach(System.out::println);
@@ -27,10 +30,13 @@ public class StringAPI {
         String replaceAll = "The quick brown fox";
         String result = replaceAll.replaceAll("\\s", "_"); // Replace spaces with underscores
         System.out.println(result); // Output: The_quick_brown_fox
+        System.out.println(replaceAll.replace(" ", "_"));
         
+        System.out.println(replaceAll.join(result, words));
         
         //joining method
         List<String> strJoining = Arrays.asList("Java", "8", "Streams");
+       
         String resultJoining = strJoining.stream()
                              .collect(Collectors.joining(" "));
         System.out.println(resultJoining); // Output: Java 8 Streams
@@ -48,6 +54,7 @@ public class StringAPI {
         
         //contains
         String strContains = "Java programming";
+       
         if (strContains.contains("Java")) {
             System.out.println("The string contains 'Java'");
         } else {
@@ -58,8 +65,10 @@ public class StringAPI {
         //Starts with
         String stStartsWithr = "Java Programming";
         
-        if (stStartsWithr.startsWith("Java")) {
+        if (stStartsWithr.startsWith("Java P")) {
             System.out.println("The string starts with 'Java'");
+        }else {
+        	System.out.println("The string doesnt tarts with 'Java'");
         }
         
         if (stStartsWithr.endsWith("Programming")) {

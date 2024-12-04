@@ -1,16 +1,29 @@
 package abstraction;
 
+import java.io.Serializable;
+
 interface IAnimal {
-    // Abstract method
+    
+	// Abstract method
     void sound();
 
     // Default method
     default void sleep() {
         System.out.println("This animal is sleeping");
     }
+    
+    // Default method
+    default void sleep1() {
+        System.out.println("This animal is sleeping-1");
+    }
+    
+    // Default method
+    default void sleep2() {
+        System.out.println("This animal is sleeping-2");
+    }
 }
 
-class Sheep implements IAnimal {
+class Sheep implements IAnimal, Serializable{
     // Providing implementation for the abstract method
     public void sound() {
         System.out.println("The dog barks");

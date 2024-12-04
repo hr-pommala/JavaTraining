@@ -8,8 +8,12 @@ public class EncapsulationExample {
 
         // Set values using setters
         person.setName("John Doe");
-        person.setAge(25);
+        person.setAge(5);
 
+        //25 0 -1 5
+        
+        //Postive and Negative scenarios using Junit, Cucumber, 
+        
         // Get values using getters
         System.out.println("Name: " + person.getName());
         System.out.println("Age: " + person.getAge());

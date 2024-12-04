@@ -1,0 +1,51 @@
+Ways to Create Streams:
+From Collections: stream() method on collections like List, Set, etc.
+From Arrays: Arrays.stream() method.
+From Stream.of(): Creates a stream from a specified set of values.
+From Stream.iterate(): Creates an infinite stream by generating elements based on a given function.
+From Stream.generate(): Creates an infinite stream by repeatedly applying a Supplier.
+From Files.lines(): Creates a stream from the lines of a file.
+From Stream.concat(): Combines two streams into one.
+From Stream.builder(): Builds a stream using a builder.
+
+
+/*****************Marker Interface******************/
+A marker interface in Java is an interface that has no methods or constants. It is used primarily to indicate to the JVM or to other parts of a program that a class has a particular property or behavior, which is often used for polymorphism or special handling by external libraries or frameworks.
+
+Marker interfaces are used for type identification and do not define any behavior themselves. They provide a mechanism to tag or mark certain classes, signaling that they should be treated differently by certain parts of the code.
+
+Characteristics of Marker Interfaces:-
+No methods: Marker interfaces do not have any methods or fields.
+Used for tagging: They serve the purpose of tagging a class with a specific meaning, usually related to how the class should behave or be processed.
+Indicates special behavior: Classes implementing the marker interface may be processed differently at runtime.
+
+Use of Marker Interfaces:-
+Type Identification: It allows you to check whether an object should be treated differently. For example, an object might be treated as serializable or clonable based on whether it implements Serializable or Cloneable.
+Separation of Concerns: Marker interfaces allow for separation of concerns by tagging objects with special behavior without modifying the class implementation.
+Enforcing Specific Behavior: Classes can enforce certain behaviors, such as serialization or cloning, based on their marker interface implementation.
+
+
+
+
+/*******************************Lambda Expressions in Java*************************/
+Lambda expressions, way to provide clear and concise syntax for writing anonymous methods (implementations of functional interfaces) directly in the code. They allow you to treat functionality as a method argument, or to create a new function that can be passed around. The syntax of lambda expressions is designed to be much more concise than writing full-fledged method implementations.
+
+Lambda expressions are commonly used to implement the Functional Interface (an interface with a single abstract method).
+
+Syntax:-
+(parameters) -> expression or block of code
+
+parameters: Input parameters for the function (optional if no parameters).
+->: The "arrow" operator, which separates parameters and the body of the lambda expression.
+expression or block of code: The body of the lambda, which performs the required functionality.
+
+
+Advantages:-
+Concise and Readable Code: Lambda expressions eliminate the need for boilerplate code like anonymous class definitions, making the code more concise and easier to read.
+
+Enables Functional Programming: Java 8 introduced functional programming concepts, and lambda expressions are key to this approach, making it easier to write functions that can be passed as arguments.
+
+Improved Code Maintainability: With lambda expressions, you can implement behavior directly inline, avoiding clutter and improving maintainability, as long as the logic is simple.
+
+Enables Parallel Programming: Lambda expressions work seamlessly with the new Stream API and can be processed in parallel, improving performance in multi-core processors.
+

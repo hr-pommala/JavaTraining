@@ -13,7 +13,7 @@ public class WordFrequency {
         
         for (String word : words) {
             wordCount.put(word, wordCount.getOrDefault(word, 0) + 1);
-        }
+        } 
         
         for (String word : wordCount.keySet()) {
             System.out.println(word + ": " + wordCount.get(word));

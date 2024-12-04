@@ -1,7 +1,11 @@
 package abstraction;
 
+import java.util.ArrayList;
+import java.util.List;
+
 abstract class Payment {
-    // Abstract method
+    
+	// Abstract method
     abstract void processPayment(double amount);
 
     // Concrete method
@@ -9,6 +13,8 @@ abstract class Payment {
         System.out.println("Payment is being processed...");
     }
 }
+
+
 
 class CreditCardPayment extends Payment {
     public void processPayment(double amount) {
@@ -22,11 +28,13 @@ class PayPalPayment extends Payment {
     }
 }
 
+
+
 public class PaymentExample {
 	
     public static void main(String[] args) {
     	
-        Payment payment1 = new CreditCardPayment();
+    	Payment payment1 = new CreditCardPayment();
         Payment payment2 = new PayPalPayment();
 
         payment1.paymentDetails();

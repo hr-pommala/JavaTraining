@@ -1,0 +1,9 @@
+Ways to Create Streams:
+From Collections: stream() method on collections like List, Set, etc.
+From Arrays: Arrays.stream() method.
+From Stream.of(): Creates a stream from a specified set of values.
+From Stream.iterate(): Creates an infinite stream by generating elements based on a given function.
+From Stream.generate(): Creates an infinite stream by repeatedly applying a Supplier.
+From Files.lines(): Creates a stream from the lines of a file.
+From Stream.concat(): Combines two streams into one.
+From Stream.builder(): Builds a stream using a builder.
