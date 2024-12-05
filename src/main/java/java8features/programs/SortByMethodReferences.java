@@ -1,7 +1,8 @@
 package java8features.programs;
 
-import java.util.*;
-import java.util.stream.*;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
 
 public class SortByMethodReferences {
 	
@@ -14,10 +15,13 @@ public class SortByMethodReferences {
             new Employee(4, "Charlie", 70000)
         );
 
+        Comparable test;
         // Sort employees by name using method reference
         employees.stream()
                 .sorted(Comparator.comparing(Employee::getName))
                 .forEach(System.out::println);  // Prints sorted employees by name
     }
+    
+    
 }
 

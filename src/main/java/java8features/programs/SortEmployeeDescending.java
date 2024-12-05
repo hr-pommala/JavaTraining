@@ -13,10 +13,19 @@ public class SortEmployeeDescending {
             new Employee(4, "Charlie", 70000)
         );
 
+        //current, next
+        //this , next
+        
         // Sort employees by salary in descending order
         employees.stream()
                 .sorted((e1, e2) -> Double.compare(e2.getSalary(), e1.getSalary()))
                 .forEach(System.out::println);  // Prints sorted employees by salary
+       
+        System.out.println("\n");
+        
+        employees.stream()
+        .sorted((e1, e2) -> Double.compare(e1.getSalary(), e2.getSalary()))
+        .forEach(System.out::println);  // Prints sorted employees by salary
     }
 }
 

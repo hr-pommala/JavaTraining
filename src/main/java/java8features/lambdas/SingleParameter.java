@@ -5,10 +5,14 @@ public class SingleParameter {
 	 public static void main(String[] args) {
 	      
 		 // Lambda expression with one parameter
-	     MyFunction printLength = (str) -> System.out.println(str.length());
-	     printLength.apply("Hello Lambda!");  // Prints: 13
+	     MyFunction printLength = (str) ->  System.out.println(str.length());
+	     
+	     
+	     printLength.apply("Hello World!");  // Prints: 13
 	    
 	 }
+	 
+	 //(String str)
 	 
 	 
 	 @FunctionalInterface

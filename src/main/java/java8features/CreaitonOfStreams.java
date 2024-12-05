@@ -4,10 +4,10 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
-
 
 //java.lang is implicit import by java
 public class CreaitonOfStreams {
@@ -26,6 +26,7 @@ public class CreaitonOfStreams {
        /**************** Stream.of() *******/
         
         Stream<String> fruitStream = Stream.of("Apple", "Banana", "Cherry");
+       
         fruitStream.forEach(System.out::println);  // Prints: Apple Banana Cherry
         
         //fruitStream.forEach(System.out::println);  // Prints: Apple Banana Cherry

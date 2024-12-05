@@ -10,6 +10,8 @@ public class SortByMultipleCriteria {
         List<Employee> employees = Arrays.asList(
             new Employee(1, "John", 50000),
             new Employee(2, "Alice", 75000),
+            new Employee(5, "Alice1", 85000),
+            new Employee(6, "Alice2", 35000),
             new Employee(3, "Bob", 75000),
             new Employee(4, "Alice", 70000)
         );
