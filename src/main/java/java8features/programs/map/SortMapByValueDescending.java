@@ -18,7 +18,7 @@ public class SortMapByValueDescending {
         // Sort map by values (descending order)
         Map<Integer, String> sortedByValueDesc = map.entrySet()
                                                     .stream()
-                                                    .sorted((entry1, entry2) -> entry2.getValue().compareTo(entry1.getValue()))
+                                                    .sorted((entry1, entry2) -> entry1.getValue().compareTo(entry2.getValue()))
                                                     .collect(Collectors.toMap(
                                                         Map.Entry::getKey,
                                                         Map.Entry::getValue,

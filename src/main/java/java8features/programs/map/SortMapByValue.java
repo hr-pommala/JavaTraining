@@ -14,6 +14,7 @@ public class SortMapByValue {
         map.put(1, "One");
         map.put(4, "Four");
         map.put(2, "Two");
+        
 
         // Sort map by values (ascending order)
         Map<Integer, String> sortedByValue = map.entrySet()

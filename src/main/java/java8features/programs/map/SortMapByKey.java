@@ -26,6 +26,7 @@ public class SortMapByKey {
                                                   LinkedHashMap::new // Preserve insertion order
                                               ));
 
+        //FIFO
         sortedByKey.forEach((key, value) -> System.out.println(key + ": " + value));
     }
 }

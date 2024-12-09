@@ -8,10 +8,11 @@ public class SortMapByMultipleCriteria {
     public static void main(String[] args) {
     	
         Map<Integer, String> map = new HashMap<>();
-        map.put(3, "Apple");
+       
         map.put(1, "Banana");
         map.put(4, "Orange");
         map.put(2, "Banana");
+        map.put(3, "Apple");
 
         // Sort by value, then by key if values are equal
         Map<Integer, String> sortedMap = map.entrySet()
